@@ -1,0 +1,17 @@
+<!--canvas.axml-->
+<layout title="生成海报">
+  <view slot="content" class="content">
+    <view class="btn-box">
+      <view class="btn" onTap="showLayer">生成海报</view>
+    </view>
+    <canvas id="posterCanvas" style="height:{{ ctxHeight }}px;"></canvas>
+  </view>
+</layout>
+
+<layer show="{{ showShareImg }}" mask-close>
+  <image class="poster-image" src="{{ shareImgSrc }}" style="width:{{ ctxWidth * 0.82 }}px;height:{{ ctxHeight * 0.82 }}px;">
+  </image>
+  <view slot="footer" class="btn-box">
+    <view class="btn" onTap="savePoster">保存海报</view>
+  </view>
+</layer>

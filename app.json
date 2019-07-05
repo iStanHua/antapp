@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/auth",
+    "pages/log",
+    "pages/my/index",
+    "pages/my/canvas"
+  ],
+  "window": {
+    "defaultTitle": "好集市",
+    "allowsBounceVertical": "NO",
+    "transparentTitle": "always",
+    "backgroundColor": "#f5f5f9"
+  },
+  "usingComponents": {
+    "layout": "/components/layout",
+    "loading": "/components/common/loading/index"
+  },
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "subPackages": []
+}

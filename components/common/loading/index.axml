@@ -1,0 +1,5 @@
+<!-- loading/index.axml -->
+<view a:if="{{ show }}" class="loading{{ fullscreen?' loading-fullscreen':'' }}">
+  <view class="tips" a:if="{{ tips }}">{{ tips }}</view>
+  <slot a:else></slot>
+</view>

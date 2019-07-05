@@ -1,0 +1,16 @@
+<!--layout.axml-->
+<view a:if="{{ title }}" class="header{{ isBack?' header-back':'' }}"
+  style="height:{{ height }}px;padding-top: {{ paddingTop }}px;">
+  <view a:if="{{ isBack }}" class="icon i-arrow-left" onTap="goBack"><text>{{ title }}</text></view>
+  <view a:else class="title" style="line-height:{{ height }}px;">{{ title }}</view>
+</view>
+<slot name="content"></slot>
+<view a:if="{{ isFooter }}" class="footer">
+  <view class="footer-item{{ item.active?' footer-active':'' }}" a:for="{{ footerList }}" key="{{ index }}"
+    data-route="{{ item.route }}" onTap="footerTap">
+    <view class="icon i-{{ item.icon }}"></view>
+    <view>{{ item.name }}</view>
+  </view>
+</view>
+<slot name="footer"></slot>
+<loading show="{{ loading }}" fullscreen></loading>

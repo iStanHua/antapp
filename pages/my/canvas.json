@@ -1,6 +1,8 @@
 {
   "disableScroll": true,
   "usingComponents": {
+    "layout": "/components/layout",
+    "loading": "/components/common/loading/index",
     "layer": "/components/common/layer/index"
   }
 }

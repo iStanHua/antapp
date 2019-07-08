@@ -1,6 +1,6 @@
 <!-- layer/index.axml -->
-<view a:if="{{ show }}" class="layer" onTap="clickLayer" :class="{'layer-fullscreen':fullscreen}"
-  style="{'z-index':{{zIndex}}}">
+<view a:if="{{ show }}" class="layer" onTap="clickLayer" class="{{ fullscreen?' layer-fullscreen':'' }}"
+  style="z-index:{{zIndex}}">
   <view class="layer-box" style="{{ style }}">
     <view a:if="{{ title }}" class="layer-header">
       <view class="layer-title">{{ title }}</view>

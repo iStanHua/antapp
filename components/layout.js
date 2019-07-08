@@ -23,19 +23,17 @@ Component({
       { icon: 'home', name: '首页', route: 'pages/index', active: false },
       { icon: 'find', name: '发现', route: 'pages/find', active: false },
       { icon: 'my', name: '我的', route: 'pages/my/index', active: false }
-    ],
-    currentPage: null
+    ]
   },
   onInit() {
-    my.setCanPullDown({
-      canPullDown:false
-    })
-    this.setSystemInfo()
-    this.setFooterActive()
   },
   didMount() {
+    my.setCanPullDown({
+      canPullDown: false
+    })
+    this.setSystemInfo()
   },
-  didUnmount(){
+  didUnmount() {
   },
   methods: {
     setSystemInfo() {
@@ -52,7 +50,7 @@ Component({
       const sys = my.getSystemInfoSync()
       this.setData({
         paddingTop: sys.statusBarHeight,
-        currentPage: getCurrentPages()[0]
+        currentPage: this.$page
       })
       console.log(sys)
       if (sys.system.indexOf('iOS') > -1) {
@@ -65,6 +63,10 @@ Component({
           height: 46
         })
       }
+      my.setNavigationBar({
+        title: ' '
+      })
+      this.setFooterActive()
     },
     goBack() {
       if (this.data.currentPage) {
@@ -79,7 +81,7 @@ Component({
       }
     },
     setFooterActive() {
-      if (!this.data.isFooter) return
+      if (!this.props.isFooter) return
       for (let i = 0; i < this.data.footerList.length; i++) {
         let data = this.data.footerList[i]
         if (data.route === this.data.currentPage.route) {

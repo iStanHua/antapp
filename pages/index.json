@@ -1,5 +1,8 @@
 {
   "disableScroll": true,
   "disableSwipeBack": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "layout": "/components/layout",
+    "loading": "/components/common/loading/index"
+  }
 }

@@ -52,7 +52,7 @@ Component({
   },
   methods: {
     clickLayer() {
-      if (this.data.maskClose) {
+      if (this.props.maskClose) {
         this.closeLayer()
       }
     },

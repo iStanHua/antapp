@@ -26,9 +26,9 @@ export function fetch(options) {
         }
         else if (res.statusCode === 403) {
           my.confirm({
-            content: '为了更好的体验，此小程序必须授权登录后才能操作，是否确定授权？',
-            confirmButtonText: '确定',
-            cancelButtonText: '取消',
+            content: '取消授权，可能会使部分服务无法使用，或页面信息显示不完整',
+            confirmButtonText: '确定授权',
+            cancelButtonText: '放弃授权',
             success: () => {
               my.navigateTo({
                 url: '/pages/auth'

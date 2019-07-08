@@ -40,7 +40,7 @@ Page({
 
     searchList = null
   },
-  onTap(e) {
+  onClick(e) {
     this.addToHistory(e.currentTarget.dataset.val)
   },
   addToHistory(keyword) {

@@ -1,6 +1,7 @@
 <!--index.axml-->
 <layout title="首页" is-footer loading="{{ loading }}">
   <view slot="content" class="content">
+    <water-mark></water-mark>
     <view class="logo">
       <image src="/images/logo.jpg"></image>
     </view>
